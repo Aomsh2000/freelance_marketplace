@@ -96,9 +96,9 @@ async onDoneClick(projectID: string) {
         freelancerId
       );
     }
-
-    this.loadApprovedProjects();
     await this.userService.refreshUserProfile();
+    this.loadApprovedProjects();
+   
 
   } catch (err) {
     console.error('Failed to mark the project as complete', err);
